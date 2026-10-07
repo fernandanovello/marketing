@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fernanda | Marketing Estratégico</title>
+
+    <meta name="description"
+          content="Fernanda, especialista em Marketing Estratégico, Branding, Growth, Conteúdo, SEO e Performance.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+    <style>
+
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            background: #f7f6f2;
+            color: #171717;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* =========================
+           VARIÁVEIS
+        ========================= */
+
+        :root {
+            --black: #171717;
+            --dark: #242424;
+            --white: #ffffff;
+            --cream: #f7f6f2;
+            --gray: #6f6f6f;
+            --light-gray: #e8e6df;
+            --green: #b400c4;
+            --green-light: #dce9e3;
+            --accent: #d6a83f;
+        }
+
+        /* =========================
+           CONTAINER
+        ========================= */
+
+        .container {
+            width: min(1180px, 90%);
+            margin: 0 auto;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(247, 246, 242, 0.94);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .nav {
+            height: 78px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--green);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 32px;
+        }
+
+        nav a {
+            font-size: 0.9rem;
+            color: #444;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--green);
+        }
+
+        .nav-button {
+            background: var(--black);
+            color: white;
+            padding: 11px 20px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 88vh;
+            display: flex;
+            align-items: center;
+            padding: 100px 0;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.3fr 0.7fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .eyebrow {
+            color: var(--green);
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-size: clamp(3.2rem, 7vw, 6.8rem);
+            line-height: 0.95;
+            letter-spacing: -5px;
+            max-width: 850px;
+        }
+
+        .hero h1 em {
+            font-family: "Playfair Display", serif;
+            font-weight: 500;
+        }
+
+        .hero-text {
+            margin-top: 35px;
+            max-width: 680px;
+            font-size: 1.15rem;
+            color: #5f5f5f;
+        }
+
+        .hero-actions {
+            margin-top: 40px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .button-primary {
+            background: var(--green);
+            color: white;
+        }
+
+        .button-primary:hover {
+            transform: translateY(-2px);
+        }
+
+        .button-secondary {
+            border: 1px solid #ccc;
+        }
+
+        .button-secondary:hover {
+            border-color: var(--black);
+        }
+
+        .hero-card {
+            background: var(--green);
+            color: white;
+            padding: 40px;
+            min-height: 390px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .hero-card-number {
+            font-size: 4rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .hero-card p {
+            font-size: 1rem;
+            opacity: 0.85;
+        }
+
+        .hero-card strong {
+            font-size: 1.4rem;
+        }
+
+        /* =========================
+           SEÇÕES
+        ========================= */
+
+        section {
+            padding: 110px 0;
+        }
+
+        .section-label {
+            color: var(--green);
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            line-height: 1.05;
+            letter-spacing: -2px;
+            max-width: 800px;
+        }
+
+        .section-intro {
+            margin-top: 25px;
+            max-width: 700px;
+            color: var(--gray);
+            font-size: 1.05rem;
+        }
+
+        /* =========================
+           SOBRE
+        ========================= */
+
+        .about {
+            background: white;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 90px;
+            margin-top: 70px;
+        }
+
+        .about-highlight {
+            font-size: 2rem;
+            line-height: 1.2;
+            font-weight: 600;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .about-text strong {
+            color: var(--black);
+        }
+
+        /* =========================
+           ÁREAS
+        ========================= */
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            margin-top: 70px;
+            border-top: 1px solid #ccc;
+        }
+
+        .service {
+            padding: 40px 30px 40px 0;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .service:nth-child(odd) {
+            border-right: 1px solid #ccc;
+            padding-right: 50px;
+        }
+
+        .service:nth-child(even) {
+            padding-left: 50px;
+        }
+
+        .service-number {
+            color: var(--green);
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        .service h3 {
+            font-size: 1.7rem;
+            margin: 15px 0;
+        }
+
+        .service p {
+            color: var(--gray);
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 20px;
+        }
+
+        .tag {
+            border: 1px solid #d5d5d5;
+            border-radius: 20px;
+            padding: 6px 12px;
+            font-size: 0.75rem;
+            color: #555;
+        }
+
+        /* =========================
+           CASES
+        ========================= */
+
+        .cases {
+            background: var(--dark);
+            color: white;
+        }
+
+        .cases .section-label {
+            color: #D796F2;
+        }
+
+        .cases .section-intro {
+            color: #aaa;
+        }
+
+        .cases-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-top: 60px;
+        }
+
+        .case {
+            background: #303030;
+            padding: 35px;
+            min-height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: 0.3s;
+        }
+
+        .case:hover {
+            transform: translateY(-5px);
+        }
+
+        .case-category {
+            color: #D796F2;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .case h3 {
+            font-size: 2rem;
+            line-height: 1.1;
+            margin-top: 15px;
+        }
+
+        .case p {
+            color: #bcbcbc;
+            margin-top: 15px;
+        }
+
+        .case-link {
+            margin-top: 30px;
+            font-weight: 600;
+            color: white;
+        }
+
+        /* =========================
+           DIFERENCIAL
+        ========================= */
+
+        :root {
+    /* Altere o valor da variável para o lilás */
+    --green-light: #e8b3ff; 
+}
+
+        .difference {
+            background: var(--green-light);
+        }
+
+        .difference-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            margin-top: 60px;
+        }
+
+        .difference-list {
+            list-style: none;
+        }
+
+        .difference-list li {
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(23, 77, 60, 0.2);
+            font-size: 1.1rem;
+        }
+
+        .difference-list strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .difference-list span {
+            color: #b400c4;
+            font-size: 0.95rem;
+        }
+
+        .quote {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            line-height: 1.1;
+        }
+
+        /* =========================
+           FORMAÇÃO
+        ========================= */
+
+        .timeline {
+            margin-top: 60px;
+            border-top: 1px solid #ccc;
+        }
+
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 40px;
+            padding: 30px 0;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .timeline-date {
+            color: var(--green);
+            font-weight: 700;
+        }
+
+        .timeline h3 {
+            margin-bottom: 5px;
+        }
+
+        .timeline p {
+            color: var(--gray);
+        }
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .contact {
+            background: var(--black);
+            color: white;
+            text-align: center;
+        }
+
+        .contact .section-label {
+            color: #D796F2;
+        }
+
+        .contact h2 {
+            font-size: clamp(2.8rem, 6vw, 5.5rem);
+            line-height: 1;
+            letter-spacing: -3px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .contact p {
+            color: #aaa;
+            max-width: 600px;
+            margin: 30px auto;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: var(--black);
+            color: #aaa;
+            border-top: 1px solid #333;
+            padding: 30px 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            font-size: 0.8rem;
+        }
+
+        /* =========================
+           RESPONSIVO
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            nav ul {
+                display: none;
+            }
+
+            .hero {
+                padding: 70px 0;
+            }
+
+            .hero-grid,
+            .about-grid,
+            .difference-grid {
+                grid-template-columns: 1fr;
+                gap: 45px;
+            }
+
+            .hero h1 {
+                letter-spacing: -3px;
+            }
+
+            .hero-card {
+                min-height: 300px;
+            }
+
+            .services-grid,
+            .cases-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service:nth-child(odd) {
+                border-right: none;
+                padding-right: 0;
+            }
+
+            .service:nth-child(even) {
+                padding-left: 0;
+            }
+
+            .timeline-item {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
+    <header>
+        <div class="container nav">
+
+            <a href="#" class="logo">
+                Fernanda Novello<span>.</span>
+            </a>
+
+            <nav>
+                <ul>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#atuacao">Atuação</a></li>
+                    <li><a href="#cases">Cases</a></li>
+                    <li><a href="#formacao">Formação</a></li>
+                </ul>
+            </nav>
+
+            <a href="#contato" class="nav-button">
+                Vamos conversar
+            </a>
+
+        </div>
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="container hero-grid">
+
+                <div>
+
+                    <div class="eyebrow">
+                        Marketing Estratégico
+                    </div>
+
+                    <h1>
+                        Estratégia que transforma
+                        <em>marca</em> em crescimento.
+                    </h1>
+
+                    <p class="hero-text">
+                        Atuo na interseção entre marketing, marca, conteúdo,
+                        dados e experiência digital para construir presença,
+                        gerar valor e aproximar negócios das pessoas certas.
+                    </p>
+
+                    <div class="hero-actions">
+
+                        <a href="#cases" class="button button-primary">
+                            Conheça meu trabalho
+                        </a>
+
+                        <a href="#contato" class="button button-secondary">
+                            Entrar em contato
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-card">
+
+                    <div>
+                        <div class="hero-card-number">01</div>
+
+                        <p>
+                            Estratégia antes da execução.
+                        </p>
+                    </div>
+
+                    <div>
+                        <strong>
+                            Marketing + Marca + Dados
+                        </strong>
+
+                        <p>
+                            Uma visão integrada para transformar
+                            objetivos de negócio em ações de marketing.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SOBRE
+        ========================= -->
+
+        <section id="sobre" class="about">
+
+            <div class="container">
+
+                <div class="section-label">
+                    Sobre
+                </div>
+
+                <h2 class="section-title">
+                    Marketing estratégico com visão de negócio e experiência digital.
+                </h2>
+
+                <div class="about-grid">
+
+                    <div class="about-highlight">
+                        Não penso apenas em
+                        <em>comunicar.</em>
+                        Penso em construir significado,
+                        presença e crescimento.
+                    </div>
+
+                    <div class="about-text">
+
+                        <p>
+                            Formada em TI pela Fatec e pós-graduanda em Marketing atráves da USP Esalq, sou <strong>Especialista em Marketing Estratégico</strong>,
+                            com atuação em branding, conteúdo, SEO, crescimento
+                            digital e performance.
+                        </p>
+
+                        <p>
+                            Minha formação em Sistemas para Internet e experiência
+                            com UX, Front-End e acessibilidade ampliam minha visão
+                            sobre como as pessoas encontram, percebem e interagem
+                            com uma marca no ambiente digital.
+                        </p>
+
+                        <p>
+                            Trabalho conectando <strong>estratégia, comunicação,
+                            intenção de busca, experiência e dados</strong> para
+                            transformar objetivos de negócio em ações de marketing
+                            mais coerentes e mensuráveis.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ATUAÇÃO
+        ========================= -->
+
+        <section id="atuacao">
+
+            <div class="container">
+
+                <div class="section-label">
+                    Atuação
+                </div>
+
+                <h2 class="section-title">
+                    Onde estratégia encontra execução.
+                </h2>
+
+                <p class="section-intro">
+                    Uma atuação integrada para marcas que precisam construir
+                    posicionamento, alcançar pessoas e transformar presença
+                    digital em resultado.
+                </p>
+
+
+                <div class="services-grid">
+
+                    <article class="service">
+
+                        <span class="service-number">01</span>
+
+                        <h3>Branding & Posicionamento</h3>
+
+                        <p>
+                            Construção e fortalecimento de marcas a partir
+                            de posicionamento, percepção, diferenciação e
+                            conexão com o público.
+                        </p>
+
+                        <div class="tags">
+                            <span class="tag">Posicionamento</span>
+                            <span class="tag">Brand Strategy</span>
+                            <span class="tag">Identidade</span>
+                            <span class="tag">Pesquisa</span>
+                        </div>
+
+                    </article>
+
+
+                    <article class="service">
+
+                        <span class="service-number">02</span>
+
+                        <h3>Growth & Performance</h3>
+
+                        <p>
+                            Estratégias orientadas a crescimento, aquisição,
+                            conversão e relacionamento, apoiadas por métricas
+                            e experimentação.
+                        </p>
+
+                        <div class="tags">
+                            <span class="tag">Growth</span>
+                            <span class="tag">KPIs</span>
+                            <span class="tag">Tráfego Pago</span>
+                            <span class="tag">Analytics</span>
+                        </div>
+
+                    </article>
+
+
+                    <article class="service">
+
+                        <span class="service-number">03</span>
+
+                        <h3>Conteúdo & SEO</h3>
+
+                        <p>
+                            Conteúdo pensado para pessoas e mecanismos de busca,
+                            ampliando encontrabilidade, autoridade e presença
+                            digital.
+                        </p>
+
+                        <div class="tags">
+                            <span class="tag">SEO</span>
+                            <span class="tag">Conteúdo</span>
+                            <span class="tag">GEO</span>
+                            <span class="tag">Copywriting</span>
+                        </div>
+
+                    </article>
+
+
+                    <article class="service">
+
+                        <span class="service-number">04</span>
+
+                        <h3>Experiência Digital</h3>
+
+                        <p>
+                            Visão técnica e de UX para transformar páginas,
+                            interfaces e jornadas digitais em experiências
+                            mais claras, acessíveis e orientadas à conversão.
+                        </p>
+
+                        <div class="tags">
+                            <span class="tag">UX</span>
+                            <span class="tag">Web Design</span>
+                            <span class="tag">Front-End</span>
+                            <span class="tag">Acessibilidade</span>
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CASES
+        ========================= -->
+
+        <section id="cases" class="cases">
+
+            <div class="container">
+
+                <div class="section-label">
+                    Cases selecionados
+                </div>
+
+                <h2 class="section-title">
+                    Estratégia precisa aparecer no trabalho.
+                </h2>
+
+                <p class="section-intro">
+                    Mais do que mostrar peças, apresento o raciocínio por trás
+                    de cada projeto: contexto, desafio, estratégia, execução
+                    e impacto.
+                </p>
+
+
+                <div class="cases-grid">
+
+                    <article class="case">
+
+                        <div>
+
+                            <span class="case-category">
+                                Branding • Conteúdo
+                            </span>
+
+                            <h3>
+                                Posicionamento de marca
+                            </h3>
+
+                            <p>
+                                Estruturação de comunicação para tornar
+                                uma marca mais reconhecível, relevante
+                                e coerente com seu público.
+                            </p>
+
+                        </div>
+
+                        <a href="#" class="case-link">
+                            Ver case →
+                        </a>
+
+                    </article>
+
+
+                    <article class="case">
+
+                        <div>
+
+                            <span class="case-category">
+                                Growth • Performance
+                            </span>
+
+                            <h3>
+                                Estratégia de aquisição
+                            </h3>
+
+                            <p>
+                                Planejamento de ações para ampliar alcance,
+                                gerar oportunidades e acompanhar indicadores
+                                ao longo do funil.
+                            </p>
+
+                        </div>
+
+                        <a href="#" class="case-link">
+                            Ver case →
+                        </a>
+
+                    </article>
+
+
+                    <article class="case">
+
+                        <div>
+
+                            <span class="case-category">
+                                SEO • Conteúdo
+                            </span>
+
+                            <h3>
+                                Encontrabilidade digital
+                            </h3>
+
+                            <p>
+                                Estruturação de conteúdo e páginas com foco
+                                em intenção de busca, experiência e
+                                descoberta orgânica.
+                            </p>
+
+                        </div>
+
+                        <a href="#" class="case-link">
+                            Ver case →
+                        </a>
+
+                    </article>
+
+
+                    <article class="case">
+
+                        <div>
+
+                            <span class="case-category">
+                                UX • Conversão
+                            </span>
+
+                            <h3>
+                                Experiência orientada à ação
+                            </h3>
+
+                            <p>
+                                Organização de páginas e jornadas digitais
+                                para reduzir fricção e aproximar usuários
+                                da ação desejada.
+                            </p>
+
+                        </div>
+
+                        <a href="#" class="case-link">
+                            Ver case →
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             DIFERENCIAL
+        ========================= -->
+
+        <section class="difference">
+
+            <div class="container">
+
+                <div class="section-label">
+                    Diferencial
+                </div>
+
+                <div class="difference-grid">
+
+                    <div>
+
+                        <h2 class="section-title">
+                            Uma visão que conecta áreas que normalmente ficam separadas.
+                        </h2>
+
+                    </div>
+
+
+                    <div>
+
+                        <ul class="difference-list">
+
+                            <li>
+                                <strong>Marketing + Tecnologia</strong>
+                                <span>
+                                    Entendo tanto a estratégia quanto
+                                    a estrutura digital que a sustenta.
+                                </span>
+                            </li>
+
+                            <li>
+                                <strong>Marca + Performance</strong>
+                                <span>
+                                    Construção de valor sem perder de vista
+                                    aquisição, conversão e resultado.
+                                </span>
+                            </li>
+
+                            <li>
+                                <strong>Criatividade + Dados</strong>
+                                <span>
+                                    Ideias orientadas por contexto, métricas
+                                    e comportamento.
+                                </span>
+                            </li>
+
+                            <li>
+                                <strong>Estratégia + Execução</strong>
+                                <span>
+                                    Capacidade de transformar direcionamento
+                                    em entregas digitais concretas.
+                                </span>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FORMAÇÃO
+        ========================= -->
+
+        <section id="formacao">
+
+            <div class="container">
+
+                <div class="section-label">
+                    Formação & repertório
+                </div>
+
+                <h2 class="section-title">
+                    Uma base multidisciplinar para pensar marketing de forma integrada.
+                </h2>
+
+
+                <div class="timeline">
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-date">
+                            2026 →
+                        </div>
+
+                        <div>
+                            <h3>
+                                MBA em Marketing
+                            </h3>
+
+                            <p>
+                                USP ESALQ
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-date">
+                            2025
+                        </div>
+
+                        <div>
+                            <h3>
+                                Sistemas para Internet
+                            </h3>
+
+                            <p>
+                                FATEC Rubens Lara
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-date">
+                            Formação
+                        </div>
+
+                        <div>
+                            <h3>
+                                Marketing, tecnologia e experiência digital
+                            </h3>
+
+                            <p>
+                                SEO, Growth, Analytics, UX, conteúdo,
+                                IA aplicada ao Marketing, Front-End,
+                                acessibilidade e Web Design.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CONTATO
+        ========================= -->
+
+        <section id="contato" class="contact">
+
+            <div class="container">
+
+                <div class="section-label">
+                    Contato
+                </div>
+
+                <h2>
+                    Sua marca precisa apenas de presença ou de direção?
+                </h2>
+
+                <p>
+                    Se você busca estratégia, posicionamento e execução
+                    para construir crescimento de forma consistente,
+                    vamos conversar.
+                </p>
+
+                <a href="mailto:seuemail@email.com"
+                   class="button button-primary">
+                    Entrar em contato
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <div class="container footer-content">
+
+            <span>
+                © 2026 Fernanda
+            </span>
+
+            <span>
+                Marketing Estratégico
+            </span>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
